@@ -48,9 +48,15 @@ SCRAPED_PARAGRAPHS.csv
 # Config file (replaced by .env)
 config.json
 
-# Output directories (uncomment if you want to ignore embeddings)
-# free/
-# openai/
+# Large embedding files (too big for GitHub)
+free/free_paragraphs.csv
+openai/openai_paragraphs.csv
+openai/openai_3_clusters.csv
+
+# Keep smaller embedding files
+!free/free_talks.csv
+!free/free_3_clusters.csv
+!openai/openai_talks.csv
 
 # Logs
 *.log

@@ -1,0 +1,35 @@
+================================================================================
+COMPARISON REPORT: Semantic Search Strategies
+================================================================================
+
+ANALYSIS OF GRANULARITY DIFFERENCES
+--------------------------------------------------------------------------------
+
+1. FULL-TEXT EMBEDDINGS (Talks)
+   - Captures overall themes and messages of entire talks
+   - Best for: Broad thematic queries, finding talks with similar overall messages
+   - Limitation: May miss specific details or examples within talks
+
+2. PARAGRAPH EMBEDDINGS
+   - Focuses on individual paragraphs as retrieval units
+   - Best for: Specific questions requiring precise teachings or examples
+   - Limitation: May lose broader context of the full talk
+
+3. CLUSTER EMBEDDINGS (k=3)
+   - Groups paragraphs into thematic clusters within each talk
+   - Best for: Balanced approach between specificity and context
+   - Limitation: Clustering may not always align with natural talk structure
+
+================================================================================
+EMBEDDING MODEL COMPARISON
+================================================================================
+
+FREE EMBEDDINGS (all-MiniLM-L6-v2)
+  - Dimensions: 384
+  - Pros: Fast, free, good general performance
+  - Cons: Lower dimensional space, may miss nuanced semantic relationships
+
+OPENAI EMBEDDINGS (text-embedding-3-small)
+  - Dimensions: 1536
+  - Pros: Higher quality, captures nuanced semantics, better for complex queries
+  - Cons: Requires API key, costs money, slightly slower

@@ -1,0 +1,12 @@
+[
+  {
+    "query": "How can I gain a testimony of Jesus Christ?",
+    "embedding_type": "openai",
+    "granularity": "talks",
+    "model": "gpt-4o-mini",
+    "retrieved_talks": [
+      {
+        "title": "Nourishing and Bearing Your Testimony",
+        "speaker": "By Elder Gary E. Stevenson",
+        "calling": "Of the Quorum of the Twelve Apostles",
+        "year": 
