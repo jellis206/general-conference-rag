@@ -2,14 +2,18 @@ from openai import OpenAI
 import pandas as pd
 import tiktoken
 from datetime import datetime
-import json
 import os
+from dotenv import load_dotenv
 
-with open("config.json") as config:
-    openaiKey = json.load(config)["openaiKey"]
+# Load environment variables from .env file
+load_dotenv()
 
-OpenAI.api_key = openaiKey
-client = OpenAI(api_key=OpenAI.api_key)
+# Get OpenAI API key from environment variable
+openai_api_key = os.getenv("OPENAI_API_KEY")
+if not openai_api_key:
+    raise ValueError("OPENAI_API_KEY not found in environment variables. Please set it in your .env file.")
+
+client = OpenAI(api_key=openai_api_key)
 
 def get_embedding(texts, output_dir, model="text-embedding-3-small", max_tokens=300000):
     """

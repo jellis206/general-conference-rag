@@ -9,10 +9,14 @@ from datetime import datetime
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
-import json
+import os
+from dotenv import load_dotenv
 
-with open("config.json") as config:
-    years = json.load(config)["years"]
+# Load environment variables from .env file
+load_dotenv()
+
+# Get configuration from environment variables
+years = int(os.getenv("YEARS", 7))  # Default to 7 if not set
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
