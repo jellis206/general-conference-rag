@@ -415,7 +415,3 @@ Balances similarity with coverage
   - OpenAI: text-embedding-3-small
   - OpenAI: gpt-4o-mini
 - **Libraries**: scikit-learn, pandas, numpy, sentence-transformers, openai
-
----
-
-*End of Summary*
