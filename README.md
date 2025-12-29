@@ -170,8 +170,6 @@ Search k-means cluster centroids (k=3) for balanced granularity.
 
 ## Assignment Requirements
 
-See `claude.md` for detailed assignment requirements and implementation guidance.
-
 ### Key Tasks
 1. Compare semantic search results across strategies
 2. Integrate with ChatGPT/Claude for answer generation
@@ -194,19 +192,6 @@ psql -d your_database
 CREATE EXTENSION IF NOT EXISTS vector;
 ```
 
-See `claude.md` for full database schema and migration instructions.
-
-## Documentation
-
-- `README.md` (this file): Quick start and basic usage
-- `claude.md`: Comprehensive technical documentation
-  - Architecture and data flow
-  - Embedding strategies
-  - Semantic search algorithms
-  - Assignment requirements
-  - PostgreSQL integration guide
-  - Troubleshooting
-
 ## Performance Notes
 
 - Scraping uses ThreadPoolExecutor for parallelization
@@ -225,7 +210,6 @@ See `claude.md` for full database schema and migration instructions.
 
 ### Getting Help
 
-- Check `claude.md` for detailed troubleshooting
 - Review script comments and docstrings
 - Verify environment variables in `.env`
 
